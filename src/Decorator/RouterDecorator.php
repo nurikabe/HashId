@@ -97,7 +97,7 @@ class RouterDecorator implements RouterInterface, WarmableInterface
     /**
      * @codeCoverageIgnore
      */
-    public function match(string $pathinfo)
+    public function match(string $pathinfo): array
     {
         return $this->getRouter()->match($pathinfo);
     }

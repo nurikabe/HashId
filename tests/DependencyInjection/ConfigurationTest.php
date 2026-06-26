@@ -51,7 +51,7 @@ class ConfigurationTest extends TestCase
                 [
                     Configuration::NODE_CONVERTER => [
                         Configuration::NODE_CONVERTER_HASHIDS => [
-                            Configuration::NODE_CONVERTER_HASHIDS_SALT => null,
+                            Configuration::NODE_CONVERTER_HASHIDS_SALT => '',
                             Configuration::NODE_CONVERTER_HASHIDS_MIN_HASH_LENGTH => 10,
                             Configuration::NODE_CONVERTER_HASHIDS_ALPHABET => $defaultAlphabet,
                         ],

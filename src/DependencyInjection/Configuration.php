@@ -46,7 +46,7 @@ class Configuration implements ConfigurationInterface
             ->addDefaultsIfNotSet()
                 ->children()
                     ->scalarNode(self::NODE_CONVERTER_HASHIDS_SALT)
-                        ->defaultNull()
+                        ->defaultValue('')
                     ->end()
                     /* @scrutinizer ignore-call */
                     ->scalarNode(self::NODE_CONVERTER_HASHIDS_MIN_HASH_LENGTH)

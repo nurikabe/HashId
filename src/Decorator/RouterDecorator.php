@@ -10,6 +10,7 @@ use Symfony\Component\HttpKernel\CacheWarmer\WarmableInterface;
 use Symfony\Component\Routing\Exception\MethodNotAllowedException;
 use Symfony\Component\Routing\Exception\RouteNotFoundException;
 use Symfony\Component\Routing\RequestContext;
+use Symfony\Component\Routing\RouteCollection;
 use Symfony\Component\Routing\RouterInterface;
 
 
@@ -81,7 +82,7 @@ class RouterDecorator implements RouterInterface, WarmableInterface
     /**
      * @codeCoverageIgnore
      */
-    public function getContext()
+    public function getContext(): RequestContext
     {
         return $this->getRouter()->getContext();
     }
@@ -89,7 +90,7 @@ class RouterDecorator implements RouterInterface, WarmableInterface
     /**
      * @codeCoverageIgnore
      */
-    public function getRouteCollection()
+    public function getRouteCollection(): RouteCollection
     {
         return $this->getRouter()->getRouteCollection();
     }
